@@ -1,0 +1,109 @@
+*{padding: 0;margin: 0;box-sizing: border-box;}
+html,body{height: 100vh;}
+
+#root{
+    position: relative;
+    height:100% ;    
+}
+.container{    
+    position:inherit;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;            
+    width: 100%;    
+    
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    width: 100%;
+    padding:10px;
+    background-color: red;
+}
+.wrap-header{
+    display: flex;
+    flex-direction: column;
+    color:white;
+}
+.table{
+    width: 100%;    
+    border-collapse: collapse;
+    text-align: center;
+    margin-top:20px;
+    border: 1px solid black;
+}
+.table-header{
+    background-color: black;
+    color:white;
+}
+.table td{
+    padding:10px;
+}
+.body-row:hover{
+    cursor: pointer;
+    background-color:#a1a3ab;
+}
+.overlay{        
+    position: absolute;
+    top:0;
+    left:0;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100vh;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: all 0.7s;    
+}
+.show-modal{
+    display: flex;
+    opacity: 1;
+}
+.hide-modal{display: none; opacity: 0;}
+.overlay form{
+    width: 100%;
+    max-width: 700px;
+    padding:20px;
+    background-color: white;
+    border:5px solid #2f09ed;
+    border-radius: 20px;
+}
+.overlay form > input{
+    width: 100%;
+    padding:7px;
+    margin-top:10px;
+}
+textarea{
+    width: 100%;
+    padding: 7px;
+    margin-top: 10px;
+    resize: vertical;
+}
+.wrap-input > input{
+    width: 50%;
+    padding:7px;
+    margin-top:10px;
+}
+.wrap-input > button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+    color:green;
+    cursor: pointer;
+}
+.wrap-input > button:hover{
+    font-weight: bold;
+    background-color: azure;
+}
+.overlay form > button{
+    padding:7px 12px 7px 12px;
+    margin-top:15px;
+}
+.overlay form > button:hover{
+    cursor:pointer;
+}
+

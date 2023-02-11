@@ -12,7 +12,7 @@ html,body{height: 100vh;}
     flex-wrap: wrap;
     justify-content: center;            
     width: 100%;    
-    
+    z-index: 1;
 }
 .header{
     display: flex;
@@ -25,7 +25,16 @@ html,body{height: 100vh;}
 .wrap-header{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color:white;
+}
+.wrap-header input, .wrap-header select, .wrap-header button{
+    padding:2px;
+    outline: none;    
+}
+.wrap-header label{
+    font-size:14px;
 }
 .table{
     width: 100%;    
@@ -40,6 +49,19 @@ html,body{height: 100vh;}
 }
 .table td{
     padding:10px;
+}
+.btn-classic{
+    padding:3px 7px 3px 7px;
+    font-size: 11px;    
+    color:white;
+    cursor: pointer;
+}
+.btn-classic:hover{color:yellow;}
+.btn-edit{
+    background-color: green;
+}
+.btn-delete{
+    background-color: red;
 }
 .body-row:hover{
     cursor: pointer;
@@ -56,6 +78,7 @@ html,body{height: 100vh;}
     height:100vh;
     background-color: rgba(0,0,0,0.8);
     opacity: 0;
+    z-index: 9;
     transition: all 0.7s;    
 }
 .show-modal{
@@ -71,6 +94,16 @@ html,body{height: 100vh;}
     border:5px solid #2f09ed;
     border-radius: 20px;
 }
+.pannel-alert{
+    width: 100%;
+    text-align: center;
+    size:15px;
+    color:green;
+    padding:10px;
+    transition: all 1s;
+}
+.show{ opacity: 1;}
+.hide{opacity: 0;}
 .overlay form > input{
     width: 100%;
     padding:7px;
